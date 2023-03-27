@@ -30,10 +30,10 @@ namespace AgendaContactos2
                 {
                     case 1:
                         {
-                            datosContactos = AnadirContactos();
-                            AlmacenarDatos(datosContactos);
-                            PantallaInicio();
-                            break;
+                        datosContactos = AnadirContactos();
+                        AlmacenarDatos(datosContactos);
+                        PantallaInicio();
+                        break;
                         }
                     case 2:
                         // listarContactos();
@@ -45,7 +45,6 @@ namespace AgendaContactos2
 
         public int PantallaInicio()
         {
-
             //Console.Clear();
 
             Console.WriteLine("\n1. Añadir Contactos");
