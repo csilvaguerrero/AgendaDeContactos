@@ -1,0 +1,15 @@
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.csproj.AssemblyReference.cache
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.AssemblyInfoInputs.cache
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.AssemblyInfo.cs
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.csproj.CoreCompileInputs.cache
+C:\Users\cristian.silva\source\repos\AgendaContactos2\bin\Debug\net6.0\AgendaContactos2.exe
+C:\Users\cristian.silva\source\repos\AgendaContactos2\bin\Debug\net6.0\AgendaContactos2.deps.json
+C:\Users\cristian.silva\source\repos\AgendaContactos2\bin\Debug\net6.0\AgendaContactos2.runtimeconfig.json
+C:\Users\cristian.silva\source\repos\AgendaContactos2\bin\Debug\net6.0\AgendaContactos2.dll
+C:\Users\cristian.silva\source\repos\AgendaContactos2\bin\Debug\net6.0\AgendaContactos2.pdb
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.dll
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\refint\AgendaContactos2.dll
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.pdb
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\AgendaContactos2.genruntimeconfig.cache
+C:\Users\cristian.silva\source\repos\AgendaContactos2\obj\Debug\net6.0\ref\AgendaContactos2.dll
