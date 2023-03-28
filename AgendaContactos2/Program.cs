@@ -1,43 +1,70 @@
 ﻿using System.IO;
 using System.Reflection.Metadata.Ecma335;
+using static AgendaContactos2.Alta;
 
 namespace AgendaContactos2
 {
-    internal class Program
+    public class Program
     {
         static void Main()
         {
-            Program programa = new Program();
-            
+            Program programa = new Program();       
+          
             programa.Inicio();
         }
 
         public void Inicio()
         {
+            Empaquetar guardar = new Empaquetar();
+            Alta alta = new Alta();
+            DatosPersona persona = new DatosPersona();
+            Empresa empresa = new Empresa();
 
             Console.Clear();
 
             string[] datosContactos;
-            int opcion = PantallaInicio();
+            string tipo;
 
-            if (opcion > 2 || opcion < 1)
+            while (true)
             {
-                Console.WriteLine("No existe esa opción, inténtalo de nuevo");
-            }
-            else
-            {
-                switch (opcion)
+
+                int opcion = PantallaInicio();
+          
+                if (opcion > 4 || opcion < 1)
                 {
-                    case 1:
+                    Console.WriteLine("No existe esa opción, inténtalo de nuevo");
+                }
+                else
+                {
+                    switch (opcion)
+                    {
+                        case 1:
                         {
-                        datosContactos = AnadirContactos();
-                        AlmacenarDatos(datosContactos);
-                        PantallaInicio();
-                        break;
+                            tipo = alta.AnadirContactos();
+                                if (tipo == "1")
+                                    datosContactos = persona.CrearPersona();
+                                else
+                                    datosContactos = empresa.datosEmpresa();
+                                guardar.Empaquetacion(datosContactos);                                
+                            break;
                         }
-                    case 2:
-                        // listarContactos();
-                        break;
+                        case 2:
+                        {
+                            guardar.MostrarDatos();
+                            break;
+                        }                           
+                        case 3:
+                        {
+                           guardar.EliminarDatos();
+                           break;
+                        }
+                        case 4:
+                        {
+                           guardar.BuscarContacto();
+                           break;
+                        }
+
+                    }
                 }
             }
             
@@ -45,72 +72,15 @@ namespace AgendaContactos2
 
         public int PantallaInicio()
         {
-            //Console.Clear();
 
             Console.WriteLine("\n1. Añadir Contactos");
             Console.WriteLine("2. Listar Contactos");
+            Console.WriteLine("3. Eliminar Contactos");
+            Console.WriteLine("4. Buscar Contactos");
+            Console.WriteLine("5. Editar Contactos");
 
             return Int16.Parse(Console.ReadLine());
 
         }
-        public string[] AnadirContactos()
-        {
-
-            String[] datos = new string[4];
-
-            String nombre;
-            String apellidos;
-            String dni;
-            String telefono;
-
-            Console.Clear();
-
-            Console.WriteLine("Nombre: ");
-            nombre = Console.ReadLine();
-
-            Console.Clear();
-
-            Console.WriteLine("Apellidos: ");
-            apellidos = Console.ReadLine();
-
-            Console.Clear();
-
-            Console.WriteLine("DNI: ");
-            dni = Console.ReadLine();
-
-            Console.Clear();
-
-            Console.WriteLine("Telefono: ");
-            telefono = Console.ReadLine();
-
-            datos[0] = nombre;
-            datos[1] = apellidos;
-            datos[2] = dni;
-            datos[3] = telefono;
-
-            //Inicio();
-
-            return datos;
-            
-        }
-      
-        public List<String> AlmacenarDatos(String[] datos)
-        {
-
-            List<String> list = new List<String>();
-          
-           /* list.Add(datos[0]);
-            list.Add(datos[1]);
-            list.Add(datos[2]);
-            list.Add(datos[3]);*/
-
-
-            //list.Add(nombre = "crank arm", dni = 1234);
-
-            list.Add(datos[0], datos[1], datos[2]);
-
-            return list;
-            //Console.WriteLine(datos[0]);
-        }        
     }
 }

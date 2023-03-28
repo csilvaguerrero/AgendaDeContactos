@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\xampp\\htdocs\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj": {}
+    "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj": {}
   },
   "projects": {
-    "D:\\xampp\\htdocs\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj": {
+    "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\xampp\\htdocs\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
+        "projectUniqueName": "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
         "projectName": "AgendaContactos2",
-        "projectPath": "D:\\xampp\\htdocs\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
-        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "D:\\xampp\\htdocs\\AgendaDeContactos\\AgendaContactos2\\obj\\",
+        "projectPath": "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
+        "packagesPath": "C:\\Users\\cristian.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VisualStudio\\componentes\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\cristian.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
