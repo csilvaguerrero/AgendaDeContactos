@@ -40,11 +40,7 @@ namespace AgendaContactos2
                     {
                         case 1:
                         {
-                            tipo = alta.AnadirContactos();
-                                if (tipo == "1")
-                                    datosContactos = persona.CrearPersona();
-                                else
-                                    datosContactos = empresa.datosEmpresa();
+                                datosContactos = alta.AnadirContactos();                               
                                 guardar.Empaquetacion(datosContactos);                                
                             break;
                         }

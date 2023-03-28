@@ -62,9 +62,7 @@ namespace AgendaContactos2
 
             Console.WriteLine("\nIntroduzca el DNI del contacto a eliminar: ");
 
-            String dniBusqueda = Console.ReadLine();
-
-            //Console.WriteLine("E");
+            String dniBusqueda = Console.ReadLine();            
 
             var borrarContacto = guardarDatos.Where(x => x.dni == dniBusqueda).ToList();
 

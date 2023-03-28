@@ -11,23 +11,12 @@ namespace AgendaContactos2
     class DatosPersona : Alta
     {
 
-        public string edad;
-        public string sexo;
-
-        public string[] datosP = new String[6];
-
-        /*public string nombrePersona;
-        public string apellidosPersona;
-        public string dniPersona;
-        public string telefonoPersona;*/
-        
-        public string[] CrearPersona(){
+        public string edad { get; set; }
+        public string sexo { get; set; }      
+        public void CrearPersona(){
 
             // Console.Clear();
-            Alta alta = new Alta();
-            
-            Console.WriteLine(alta.Nombre);
-            
+            Alta alta = new Alta();                                   
 
             Console.WriteLine("\nSexo: ");
             sexo = Console.ReadLine();
@@ -35,25 +24,7 @@ namespace AgendaContactos2
             Console.Clear();
 
             Console.WriteLine("\nEdad: ");
-            edad = Console.ReadLine();
-
-            Console.Clear();
-
-            /*datosP[0] = nombrePersona;
-            datosP[1] = apellidosPersona;
-            datosP[2] = dniPersona;
-            datosP[3] = telefonoPersona;*/
-            datosP[4] = sexo;
-            datosP[5] = edad;
-
-            Console.WriteLine(datosP[0]);
-
-            foreach (var item in datosP)
-            {
-                Console.WriteLine(item);
-            }
-
-            return datosP;
+            edad = Console.ReadLine();          
 
         }
     }

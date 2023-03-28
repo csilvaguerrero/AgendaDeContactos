@@ -9,10 +9,10 @@ namespace AgendaContactos2
 {
     class Empresa : Alta
     {
-        public string sector;
-        public string nEmpleados;
+        public string sector { get; set; }
+        public string nEmpleados { get; set; }
 
-        public string[] datosEmpresa()
+        public void CrearEmpresa()
         {  
             Console.WriteLine("\nSector:");
             sector = Console.ReadLine();
@@ -21,17 +21,7 @@ namespace AgendaContactos2
 
             Console.WriteLine("\nNúmero de empleados: ");
             nEmpleados = Console.ReadLine();
-
-            Console.Clear();
-
-            /*datos[0] = nombre;
-            datos[1] = apellidos;
-            datos[2] = dni;
-            datos[3] = telefono;
-            datos[4] = sector;
-            datos[5] = nEmpleados;*/
-
-            return datos;
+            
         }
     }
 }

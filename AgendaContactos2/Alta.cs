@@ -11,13 +11,10 @@ namespace AgendaContactos2
     {
         public string[] datos = new string[6];
 
-        public string Nombre;
-        public string Apellidos;
-        public string DNI;
-        public string Telefono;
-
-        public string dato1;
-        public string dato2;
+        public string nombre;
+        public string apellidos;
+        public string dni;
+        public string telefono;
         
         /*public Alta() { }
         public Alta(string nombre, string apellidos, string dni, string telefono)
@@ -30,7 +27,7 @@ namespace AgendaContactos2
         }*/
         
 
-        public string AnadirContactos()
+        public string[] AnadirContactos()
         {
             Console.Clear();
 
@@ -42,28 +39,48 @@ namespace AgendaContactos2
             //Console.Clear();
 
             Console.Write("\nNombre: ");
-            Nombre = Console.ReadLine();
+            nombre = Console.ReadLine();
 
             //Console.Clear();
 
             Console.WriteLine("\nApellidos: ");
-            Apellidos = Console.ReadLine();
+            apellidos = Console.ReadLine();
 
             //Console.Clear();
 
             Console.WriteLine("\nDNI: ");
-            DNI = Console.ReadLine();
+            dni = Console.ReadLine();
             
             //Console.Clear();
 
             Console.WriteLine("\nTelefono: ");
-            Telefono = Console.ReadLine();
+            telefono = Console.ReadLine();
 
-            
+            datos[0] = nombre;
+            datos[1] = apellidos;
+            datos[2] = dni;
+            datos[3] = telefono;
+
+            if (opcion == "1")
+            {
+                DatosPersona persona = new DatosPersona();
+                persona.CrearPersona();
+              
+                datos[4] = persona.edad;
+                datos[5] = persona.sexo;
+            }
+            else
+            {
+                Empresa empresa = new Empresa();
+                empresa.CrearEmpresa();
+
+                datos[4] = empresa.sector;
+                datos[5] = empresa.nEmpleados;
+            }
 
             //Console.Clear();
           
-            return opcion;
+            return datos;
 
         }                
     }
