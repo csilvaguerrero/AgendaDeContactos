@@ -9,23 +9,12 @@ namespace AgendaContactos2
 {
     public class Alta
     {
-        public string[] datos = new string[6];
+        public string[] datos = new string[7];
 
         public string nombre;
         public string apellidos;
         public string dni;
-        public string telefono;
-        
-        /*public Alta() { }
-        public Alta(string nombre, string apellidos, string dni, string telefono)
-        {
-            Nombre = nombre;
-            Apellidos = apellidos;
-            DNI = dni;
-            Telefono = telefono;
-            
-        }*/
-        
+        public string telefono;            
 
         public string[] AnadirContactos()
         {
@@ -36,22 +25,22 @@ namespace AgendaContactos2
 
             string opcion = Console.ReadLine();
 
-            //Console.Clear();
+            Console.Clear();
 
             Console.Write("\nNombre: ");
             nombre = Console.ReadLine();
 
-            //Console.Clear();
+            Console.Clear();
 
-            Console.WriteLine("\nApellidos: ");
+            Console.WriteLine("\nApellidos:");
             apellidos = Console.ReadLine();
 
-            //Console.Clear();
+            Console.Clear();
 
             Console.WriteLine("\nDNI: ");
             dni = Console.ReadLine();
             
-            //Console.Clear();
+            Console.Clear();
 
             Console.WriteLine("\nTelefono: ");
             telefono = Console.ReadLine();
@@ -61,6 +50,8 @@ namespace AgendaContactos2
             datos[2] = dni;
             datos[3] = telefono;
 
+            Console.Clear();
+
             if (opcion == "1")
             {
                 DatosPersona persona = new DatosPersona();
@@ -68,6 +59,7 @@ namespace AgendaContactos2
               
                 datos[4] = persona.edad;
                 datos[5] = persona.sexo;
+                datos[6] = "P";
             }
             else
             {
@@ -76,9 +68,10 @@ namespace AgendaContactos2
 
                 datos[4] = empresa.sector;
                 datos[5] = empresa.nEmpleados;
+                datos[6] = "E";
             }
 
-            //Console.Clear();
+            
           
             return datos;
 

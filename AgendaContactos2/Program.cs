@@ -30,7 +30,7 @@ namespace AgendaContactos2
 
                 int opcion = PantallaInicio();
           
-                if (opcion > 4 || opcion < 1)
+                if (opcion > 5 || opcion < 1)
                 {
                     Console.WriteLine("No existe esa opción, inténtalo de nuevo");
                 }
@@ -40,8 +40,8 @@ namespace AgendaContactos2
                     {
                         case 1:
                         {
-                                datosContactos = alta.AnadirContactos();                               
-                                guardar.Empaquetacion(datosContactos);                                
+                            datosContactos = alta.AnadirContactos();                               
+                            guardar.Empaquetacion(datosContactos);                                
                             break;
                         }
                         case 2:
@@ -57,6 +57,11 @@ namespace AgendaContactos2
                         case 4:
                         {
                            guardar.BuscarContacto();
+                           break;
+                        }
+                        case 5:
+                        {
+                           guardar.ModificarContacto();
                            break;
                         }
 

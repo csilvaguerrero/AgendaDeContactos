@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\cristian.silva\\.nuget\\packages\\": {}
+    "C:\\Users\\crist\\.nuget\\packages\\": {},
+    "D:\\VisualStudio\\componentes\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
+      "projectUniqueName": "D:\\TODO\\Programación\\Cursos\\Curso de C# .NET\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
       "projectName": "AgendaContactos2",
-      "projectPath": "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
-      "packagesPath": "C:\\Users\\cristian.silva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cristian.silva\\source\\repos\\AgendaDeContactos\\AgendaContactos2\\obj\\",
+      "projectPath": "D:\\TODO\\Programación\\Cursos\\Curso de C# .NET\\AgendaDeContactos\\AgendaContactos2\\AgendaContactos2.csproj",
+      "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+      "outputPath": "D:\\TODO\\Programación\\Cursos\\Curso de C# .NET\\AgendaDeContactos\\AgendaContactos2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\VisualStudio\\componentes\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\cristian.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

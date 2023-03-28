@@ -26,6 +26,8 @@ namespace AgendaContactos2
             Console.WriteLine("\nEdad: ");
             edad = Console.ReadLine();          
 
+            Console.Clear();
+
         }
     }
 }

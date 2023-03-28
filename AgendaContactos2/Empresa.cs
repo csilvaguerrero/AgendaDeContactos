@@ -21,6 +21,8 @@ namespace AgendaContactos2
 
             Console.WriteLine("\nNúmero de empleados: ");
             nEmpleados = Console.ReadLine();
+
+            Console.Clear();
             
         }
     }
