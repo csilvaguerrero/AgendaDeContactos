@@ -1,6 +1,12 @@
 ﻿using System.IO;
 using System.Reflection.Metadata.Ecma335;
-using static AgendaContactos2.Alta;
+using static AgendaContactos2.Contacto;
+
+/**
+ * 
+ * Clase Main de la aplicación
+ * 
+ */
 
 namespace AgendaContactos2
 {
@@ -8,29 +14,29 @@ namespace AgendaContactos2
     {
         static void Main()
         {
-            Program programa = new Program();       
-          
+            Program programa = new Program();                 
             programa.Inicio();
         }
-
+        /**
+        * 
+        * Método que inicia la aplicación y gestiona
+        * las acciones que se llevarán a cabo sobre la misma
+        * 
+        */
         public void Inicio()
         {
-            Empaquetar guardar = new Empaquetar();
-            Alta alta = new Alta();
-            DatosPersona persona = new DatosPersona();
-            Empresa empresa = new Empresa();
+            Empaquetar procesos = new Empaquetar();
+            Contacto contacto = new Contacto();
 
-            Console.Clear();
+            List<List<string>> datosContactos = new List<List<string>>();
 
-            string[] datosContactos;
-            string tipo;
+            Console.Clear();                        
 
             while (true)
             {
-
-                int opcion = PantallaInicio();
+                int opcion = PantallaInicio();                
           
-                if (opcion > 5 || opcion < 1)
+                if (opcion > 6 || opcion < 1)
                 {
                     Console.WriteLine("No existe esa opción, inténtalo de nuevo");
                 }
@@ -40,37 +46,46 @@ namespace AgendaContactos2
                     {
                         case 1:
                         {
-                            datosContactos = alta.AnadirContactos();                               
-                            guardar.Empaquetacion(datosContactos);                                
+                            datosContactos = contacto.AnadirContactos();                            
+                            procesos.Empaquetacion(datosContactos);                             
                             break;
                         }
                         case 2:
                         {
-                            guardar.MostrarDatos();
+                            procesos.MostrarDatos();
                             break;
                         }                           
                         case 3:
                         {
-                           guardar.EliminarDatos();
+                           procesos.EliminarDatos();
                            break;
                         }
                         case 4:
                         {
-                           guardar.BuscarContacto();
+                           procesos.BuscarContacto();
                            break;
                         }
                         case 5:
                         {
-                           guardar.ModificarContacto();
+                           procesos.ModificarContacto();
                            break;
                         }
-
+                        case 6:
+                        {
+                            Environment.Exit(1);
+                            break;
+                        }
                     }
                 }
             }
             
         }
-
+        /**
+         * 
+         * Método que se ejecuta al iniciar la aplicación
+         * por defecto. Genera la interfaz inicial.
+         * 
+         */
         public int PantallaInicio()
         {
 
@@ -79,6 +94,7 @@ namespace AgendaContactos2
             Console.WriteLine("3. Eliminar Contactos");
             Console.WriteLine("4. Buscar Contactos");
             Console.WriteLine("5. Editar Contactos");
+            Console.WriteLine("6. Cerrar programa");
 
             return Int16.Parse(Console.ReadLine());
 
