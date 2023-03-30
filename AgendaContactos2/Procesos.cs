@@ -40,13 +40,7 @@ namespace AgendaContactos2
          * 
          */
         public void Empaquetacion(List<List<string>> datosContacto)
-        {
-            for (int i = 0; i < datosContacto[1].Count; i++)
-            {
-                Console.WriteLine("sda");
-            }
-            Console.WriteLine(datosContacto[1]);
-
+        {            
             bool estado = true;
 
             var buscarDNI = guardarDatos.Where(x => x.dni == datosContacto[0][2]).ToList();
@@ -58,15 +52,13 @@ namespace AgendaContactos2
             }
 
             if (estado)
-                guardarDatos.Add(new Procesos() { nombre = datosContacto[0][0], apellidos = datosContacto[0][1], dni = datosContacto[0][2], telefono = datosContacto[0][3], animal = datosContacto[0][4], adicional1 = datosContacto[0][5], adicional2 = datosContacto[0][6], tipo = datosContacto[0][7], notas = datosContacto[1] });
+                guardarDatos.Add(new Procesos() { nombre = datosContacto[0][0], apellidos = datosContacto[0][1], dni = datosContacto[0][2], telefono = datosContacto[0][3], animal = datosContacto[0][4], adicional1 = datosContacto[0][5], adicional2 = datosContacto[0][6], tipo = datosContacto[0][7], notas = datosContacto[1].ToList() });
             else
                 Console.WriteLine("El DNI que has introducido ya existe, inténtalo de nuevo.");
 
             datosContacto[0].Clear();
-            datosContacto[1].Clear();
+            datosContacto[1].Clear();            
 
-            
-            
         }
         /**
          *         
@@ -89,12 +81,9 @@ namespace AgendaContactos2
                 Console.WriteLine("Animal: "+ datos.animal);
                 Console.WriteLine("\nDatos adicionales");
                 Console.WriteLine(datos.adicional1);
-                Console.WriteLine(datos.adicional2);
-
-
-                Console.WriteLine(datos.notas.Count);
+                Console.WriteLine(datos.adicional2);               
                 
-                if (!datos.notas.Any())
+                if (datos.notas.Count != 0)
                 {
                     Console.WriteLine("   Notas: ");                    
                     for (int i = 0; i < datos.notas.Count; i++)
@@ -180,11 +169,9 @@ namespace AgendaContactos2
                 Console.WriteLine(datos.adicional1);
                 Console.WriteLine(datos.adicional2);
 
-                if (datos.notas.Count() == 1)
+                if (datos.notas.Count != 0)
                 {
                     Console.WriteLine("   Notas: ");
-
-                    
                     for (int i = 0; i < datos.notas.Count; i++)
                         Console.WriteLine("\t" + datos.notas[i]);
                 }
@@ -323,6 +310,7 @@ namespace AgendaContactos2
                             {
                                 Console.Clear();
                                 Console.WriteLine("Notas: ");
+                                Console.WriteLine("Introduce (S) para parar de guardar notas ");
                                 string anotacion = Console.ReadLine();
                                 if (anotacion != "S")
                                 {
